@@ -1,0 +1,23 @@
+public class Estudiante extends Persona {
+  private String grado;
+
+  // Constructor
+  public Estudiante(String nombre, String apellido, String grado) {
+      super(nombre, apellido); // Llama al constructor de Persona
+      this.grado = grado;
+  }
+
+  // Getter y Setter de grado
+  public String getGrado() {
+      return grado;
+  }
+
+  public void setGrado(String grado) {
+      this.grado = grado;
+  }
+
+  // Método propio del estudiante
+  public void estudiar() {
+      System.out.println(getFullName() + " del grado " + grado + " está estudiando.");
+}
+}
