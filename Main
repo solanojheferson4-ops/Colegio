@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Profesores
+        Profesor prof1 = new Profesor("Juan", "Pérez", "Matemáticas");
+        Profesor prof2 = new Profesor("Ana", "López", "Historia");
+
+        // Estudiantes
+        Estudiante est1 = new Estudiante("Carlos", "Gómez", "11A");
+        Estudiante est2 = new Estudiante("Lucía", "Martínez", "10B");
+
+        // Materias
+        Materia mat1 = new Materia("Matemáticas");
+        Materia mat2 = new Materia("Historia");
+
+        // Tareas
+        Tarea tarea1 = new Tarea("Resolver 20 ejercicios ✏");
+        Tarea tarea2 = new Tarea("Ensayo sobre la independencia 📜");
+
+        mat1.agregarTarea(tarea1);
+        mat2.agregarTarea(tarea2);
+
+        int opcion;
+        do {
+            System.out.println("\n📘 Bienvenido al Colegio Quipux");
+            System.out.println("1 Ver profesores");
+            System.out.println("2 Ver estudiantes");
+            System.out.println("3 Ver materias y tareas");
+            System.out.println("4 Salir");
+            System.out.print("👉 Elige una opción: ");
+            opcion = sc.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    prof1.enseñar();
+                    prof2.enseñar();
+                    break;
+                case 2:
+                    est1.estudiar();
+                    est2.estudiar();
+                    break;
+                case 3:
+                    mat1.mostrarTareas();
+                    mat2.mostrarTareas();
+                    break;
+                case 4:
+                    System.out.println("👋 Gracias por usar el sistema. ¡Hasta pronto!");
+                    break;
+                default:
+                    System.out.println("⚠ Opción no válida.");
+            }
+        } while (opcion != 4);
+
+        sc.close();
+}
+}
