@@ -1,0 +1,23 @@
+public class Profesor extends Persona {
+  private String materia;
+
+  // Constructor
+  public Profesor(String nombre, String apellido, String materia) {
+      super(nombre, apellido); // Llama al constructor de Persona
+      this.materia = materia;
+  }
+
+  // Getter y Setter de materia
+  public String getMateria() {
+      return materia;
+  }
+
+  public void setMateria(String materia) {
+      this.materia = materia;
+  }
+
+  // Método propio del profesor
+  public void enseñar() {
+        System.out.println(getFullName() + " está enseñando " + materia + ".");
+ }
+}
