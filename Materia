@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+
+public class Materia {
+    private String nombre;
+    private ArrayList<Tarea> tareas;
+
+    // Constructor
+    public Materia(String nombre) {
+        this.nombre = nombre;
+        this.tareas = new ArrayList<>(); // Lista vacía de tareas
+    }
+
+    // Getter y Setter de nombre
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // Método para agregar una tarea
+    public void agregarTarea(Tarea tarea) {
+        tareas.add(tarea);
+    }
+
+    // Método para mostrar todas las tareas de la materia
+    public void mostrarTareas() {
+        System.out.println("Tareas de " + nombre + ":");
+        for (Tarea t : tareas) {
+            System.out.println("- " + t.getDescripcion());
+ }
+}
+}
